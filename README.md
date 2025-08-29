@@ -59,9 +59,9 @@ ALIYUN_BUCKET=阿里云 OSS 的 Bucket 名称
 ALIYUN_REGION=阿里云 OSS Bucket 所在地域名称
 ```
 
-- `NODE_ENV` 配置为开发环境，如部署在生产环境可改为 `production` 。
+- `NODE_ENV` 配置为开发环境，如部署在生产环境可改为 `production`
 - `PORT` 配置为服务端口
-- `SECRET` 配置为 JWT 秘钥。
+- `SECRET` 配置为 JWT 秘钥
 - `ALIYUN` 开头的配置为阿里云 OSS 相关配置，用于文件上传存储
 
 ## 生成秘钥
