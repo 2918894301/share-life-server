@@ -3,16 +3,19 @@
 此项目为个人独立开发的社交分享类小程序后端服务。项目使用 Node.js + Express + MySQL + Sequelize ORM 开发，提供用户管理、内容分享、社交互动等完整功能。
 
 ## 项目概述
-这是一个完整的社交分享平台后端，支持用户注册登录、发布笔记、点赞收藏、评论互动、用户关注、私信交流等功能。专为微信小程序前端提供稳定、高效的API服务。
+
+这是一个完整的社交分享平台后端，支持用户注册登录、发布笔记、点赞收藏、评论互动、用户关注、私信交流等功能。专为微信小程序前端提供稳定、高效的 API 服务。
 
 ## 技术栈
+
 - 后端框架 ：Node.js + Express
 - 数据库 ：MySQL
-- ORM工具 ：Sequelize
+- ORM 工具 ：Sequelize
 - 认证机制 ：JWT (JSON Web Token)
 - 云存储 ：阿里云 OSS
 
 ## 项目结构
+
 ```
 ├── app.js                # 应用入口文件
 ├── bin/                  # 启动脚本目录
@@ -31,6 +34,7 @@
 ```
 
 ### 核心模块说明
+
 - 认证模块 ：提供用户注册、登录、密码找回等功能
 - 笔记模块 ：支持笔记的创建、查询、更新、删除等操作
 - 用户模块 ：管理用户信息、个人主页、关注关系等
@@ -39,6 +43,7 @@
 - 消息模块 ：支持用户间私信交流(待开发)
 
 ## 配置环境变量
+
 将 .env.example 文件拷贝为 .env 文件，并修改配置。
 
 ```
@@ -53,28 +58,33 @@ ALIYUN_REGION=阿里云 OSS Bucket 所在地域名称
 
 
 ```
+
 - `NODE_ENV` 配置为开发环境，如部署在生产环境可改为 `production` 。
 - `PORT` 配置为服务端口
-- `SECRET` 配置为JWT秘钥。
+- `SECRET` 配置为 JWT 秘钥。
 - `ALIYUN` 开头的配置为阿里云 OSS 相关配置，用于文件上传存储
 
-
 ## 生成秘钥
+
 在命令行中运行
 
 ```
 node
 ```
+
 进入交互模式后，运行
 
 ```
 const crypto = require('crypto');
 console.log(crypto.randomBytes(32).toString('hex'));
 ```
+
 复制得到的秘钥，并填写到 .env 文件中的 SECRET 配置。
 
 PS：可以使用 ctrl + c 退出交互模式。
+
 ## 配置数据库
+
 使用自行安装的 MySQL，需要修改 config/config.json 文件中的数据库用户名与密码。
 
 ```
@@ -85,7 +95,9 @@ PS：可以使用 ctrl + c 退出交互模式。
   }
 }
 ```
+
 ## 安装与运行
+
 ```
 
 # 安装项目依赖包
@@ -109,9 +121,11 @@ npx sequelize-cli db:seed:all
 
 npm start
 ```
+
 访问首页地址： http://localhost:3000/latest
 
 ## 数据模型
+
 系统包含以下主要数据模型：
 
 - User ：用户信息，包含用户名、密码、昵称、头像等
@@ -124,16 +138,15 @@ npm start
 - Message ：私信消息
 
 ## 开发说明
+
 ### 开发环境
+
 - Node.js 14.x 或更高版本
 - MySQL 5.7 或更高版本
 - 推荐使用 VSCode 进行开发
-### 调试模式
-```
-# 启动开发服务器（支持热重载）
-npm run dev
-```
+
 ### 数据库管理
+
 ```
 # 创建迁移文件
 npx sequelize-cli migration:generate --name 
