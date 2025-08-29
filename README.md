@@ -2,6 +2,8 @@
 
 此项目为个人独立开发的社交分享类小程序后端服务。项目使用 Node.js + Express + MySQL + Sequelize ORM 开发，提供用户管理、内容分享、社交互动等完整功能。
 
+小程序端访问地址：[share-life](https://github.com/2918894301/share-life)
+
 ## 项目概述
 
 这是一个完整的社交分享平台后端，支持用户注册登录、发布笔记、点赞收藏、评论互动、用户关注、私信交流等功能。专为微信小程序前端提供稳定、高效的 API 服务。
@@ -55,8 +57,6 @@ ALIYUN_ACCESS_KEY_ID=阿里云的 AccessKey ID
 ALIYUN_ACCESS_KEY_SECRET=阿里云的 AccessKey Secret
 ALIYUN_BUCKET=阿里云 OSS 的 Bucket 名称
 ALIYUN_REGION=阿里云 OSS Bucket 所在地域名称
-
-
 ```
 
 - `NODE_ENV` 配置为开发环境，如部署在生产环境可改为 `production` 。
